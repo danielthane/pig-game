@@ -15,10 +15,7 @@ const btnNew = document.querySelector('.btn--new');
 const btnHold = document.querySelector('.btn--hold');
 
 //Setting Initial conditions
-let scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let playing = true;
+let scores, currentScore, activePlayer, playing;
 
 //Starting Conditions
 const init = function () {
@@ -94,6 +91,4 @@ btnHold.addEventListener('click', () => {
   }
 });
 
-btnNew.addEventListener('click', () => {
-  init();
-});
+btnNew.addEventListener('click', init);
